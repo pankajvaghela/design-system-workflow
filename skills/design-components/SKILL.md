@@ -9,7 +9,7 @@ For ordinary pack requests, start with [design-workflow](../design-workflow/SKIL
 
 Inspect the current canvas, relevant product guidance and existing sources first. Preserve approved palette, theme modes, typography, icons, images and dimensions unless the request changes them. Discover editor capabilities and use actual component/instance objects; disclose unsupported variant or slot behavior rather than simulating it under misleading names.
 
-Use approved semantic color roles and theme bindings from [design-foundations](../design-foundations/SKILL.md). Check representative states in every required theme. If foundations are missing or need material changes, return that decision to the orchestrator before dependent source construction; do not invent a palette inside component work.
+Use approved typography roles from the [typography specification](../design-foundations/references/typography-specification.md); retain native text-style links and document intentional exceptions. Use approved semantic color roles and theme bindings from [design-foundations](../design-foundations/SKILL.md). Check representative states in every required theme. If foundations are missing or need material changes, return that decision to the orchestrator before dependent source construction; do not invent a palette inside component work.
 
 ## Define a small useful contract
 
@@ -31,6 +31,8 @@ Keep this contract in native descriptions/properties when practical. Use a short
 5. Instantiate the sources and test their contract with differing real content. Cover the requested states and obvious states needed for the specified interaction; do not build a speculative Cartesian product of variants.
 
 Name layers by role, not coordinates, colors or sample content. Prefer `EventCard`, `EventListItem`, `Bookmarked=Yes|No`, and `MonthSection/Collapsed=Yes|No` as illustrative naming patterns, not required product concepts. Keep content selection separate from those axes.
+
+Keep canonical sources in the existing shared component page or library. Do not create another source copy for each screen, list/card view or authentication flow. Repeated sections, such as a title/actions block, date/time row, location row or ticket action, can be reusable compositions when they have a stable responsibility. A one-off label does not need its own component. Shared controls should inherit approved typography and icon sizing from foundations.
 
 ## Check the resulting objects
 

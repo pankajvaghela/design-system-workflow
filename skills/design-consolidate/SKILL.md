@@ -19,6 +19,8 @@ Partial reference visibility can still permit a verified migration of known inst
 
 Choose a canonical source based on contract correctness, approved visuals, valid links and downstream use, not simply age or name. Record a short old-source → new-source mapping only when needed for a multi-step migration. Do not expand a local repair into an unrelated visual redesign.
 
+Consolidating pages is not the same as deduplicating sources. After an authorized move to one component page, inspect equivalent sources and inbound references again. Keep deliberately different card and list structures; share their identical nested controls where appropriate. Delete an obsolete component page only after required sources and references are preserved and no unique content remains.
+
 ## Migrate references before deleting sources
 
 1. Capture a safe checkpoint and current screen renders/layout values. Work with one document writer. Never recover by replacing a live file that contains newer user edits.

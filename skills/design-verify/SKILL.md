@@ -24,6 +24,8 @@ A successful tool response proves only that the operation returned. When a share
 
 For a review-only request, keep diagnosis read-only. State the inspected pages/screens/states and any inaccessible scope. Tie findings to actual frames/layers and evidence, with expected versus observed behavior and impact; omit unverified defects. When navigation or flow is in scope, trace the primary task from entry to outcome, checking predictive labels, grouping, context and return paths. Do not expand every local review into a full information-architecture audit.
 
+For typography or icon changes, use the acceptance checks in the [typography specification](../design-foundations/references/typography-specification.md) and inspect the affected screen at its actual viewport size, not only a zoomed canvas screenshot. Check style links, line wrapping, text hierarchy, glyph meaning, icon/target size separation and left/right insets. When a source changes, include both list/card or other relevant linked layouts in the sample. For multi-step flows, inspect frame boundaries, progress counts, ordering and forward/back/skip destinations; drawing a control does not prove it works. Keep review annotations outside prototype frames.
+
 ## Test persistence without risking live work
 
 Use the editor's supported save/reopen facilities. When reopening could disrupt the user's current document, prefer an isolated copy containing the saved result. Keep the live document and newer user changes intact. Set a bounded wait appropriate to the tool; if reopen stalls, stop and report persistence as unverified. A successful save is not proof of a successful reopen.

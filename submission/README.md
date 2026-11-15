@@ -1,6 +1,6 @@
 # OpenAI submission preparation
 
-Prepared November 15, 2026 for package **0.1.2**. This is a skills-only package maintained by Pankaj Vaghela. No submission, approval or directory listing is claimed.
+Prepared November 15, 2026 for package **0.1.3**. This is a skills-only package maintained by Pankaj Vaghela. No submission, approval or directory listing is claimed.
 
 ## Listing
 
@@ -13,7 +13,7 @@ The authoritative copy is `extensions.com.openai.interface` in [plugin.json](../
 | Publisher | Pankaj Vaghela; must match the verified portal identity |
 | Category | Art & Design |
 | Description | Full task, audience and capability-limit description in the manifest |
-| Starter prompts | Three prompts covering staged design, component review and color/theming |
+| Starter prompts | Three prompts covering staged design, component review and typography/color/icon foundations |
 | Icon | Original square SVG of connected components and a review check; used for composer and listing |
 | Website | Public GitHub repository |
 | Support | Public SUPPORT.md and GitHub Issues |
@@ -31,7 +31,7 @@ The plugin supplies seven related skills. No server, authentication, lifecycle h
 - Made user-instruction precedence, reference-content boundaries and missing editor access explicit in the orchestrator.
 - Kept MCP-only review fields absent rather than inventing tool calls, credentials or a demo recording.
 
-Version 0.1.2 changes the listing category to Art & Design; the seven skills are unchanged from 0.1.1.
+Version 0.1.3 adds the mobile-first typography specification, desktop proposals, compact icon guidance, native-file workflow, organized flow checks and source deduplication guidance. Plugin metadata and all relevant specialist links are aligned.
 
 ## Validation evidence and limits
 
@@ -47,8 +47,8 @@ From the repository root, after reviewing the exact files to include:
 
 ```sh
 mkdir -p dist
-zip -r dist/design-system-workflow-0.1.2.zip plugin.json .codex-plugin/plugin.json skills assets README.md LICENSE PRIVACY.md SUPPORT.md evaluations submission -x '*.DS_Store' '*__pycache__*' '*.pyc'
-unzip -t dist/design-system-workflow-0.1.2.zip
+zip -r dist/design-system-workflow-0.1.3.zip plugin.json .codex-plugin/plugin.json skills assets README.md LICENSE PRIVACY.md SUPPORT.md evaluations submission -x '*.DS_Store' '*__pycache__*' '*.pyc'
+unzip -t dist/design-system-workflow-0.1.3.zip
 ```
 
 The manifest and `skills/` must be at the archive root. Do not include `.git`, caches, personal files or nested `dist` output. The archive contains only the plugin and its public documentation. Rebuild after any package change; use a new version after publication rather than replacing a published release's contents.

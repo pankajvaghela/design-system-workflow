@@ -38,7 +38,8 @@ Select only stages needed for the requested outcome. Tell the user the short rou
 | --- | --- | --- |
 | Brief/current-state review | Inspected scope, constraints, inventory and concise intended outcome | [design-consolidate](../design-consolidate/SKILL.md) for an audit; otherwise inspect directly |
 | Layout exploration, only if undecided | Inspectable screen/flow alternatives with the decision they test | Work within this skill; [design-verify](../design-verify/SKILL.md) for review if useful |
-| Palette and theming, when missing or changing | Semantic color roles, required theme previews and checked contrast pairs | [design-foundations](../design-foundations/SKILL.md) |
+| Color and icon foundations, when missing or changing | Semantic colors, required themes, compact icon sizing and relevant checks | [design-foundations](../design-foundations/SKILL.md) |
+| Typography specification, when missing or changing | Mobile-first semantic text styles, in-context specimen and requested desktop mapping; reuse approved color roles | [design-foundations](../design-foundations/SKILL.md) and its [typography specification](../design-foundations/references/typography-specification.md) |
 | Component contract plan | Proposed reuse/source map, required props, content slots and layout ownership | [design-components](../design-components/SKILL.md), planning only |
 | Components, variants and sections | Actual sources with representative linked specimens and checked states | [design-components](../design-components/SKILL.md); [design-consolidate](../design-consolidate/SKILL.md) for authorized migration |
 | Linked screen assembly | Rendered requested screens with preserved content/layout/state and inspected links | [design-assemble](../design-assemble/SKILL.md) |
@@ -64,10 +65,16 @@ Keep a compact record in conversation context or an existing task note: current 
 
 On interruption or compaction, recover that record and inspect fresh document state. Preserve the recorded mode and boundary, including an awaiting-approval gate; never reset it, infer approval or replay non-idempotent work. If approval evidence is unavailable, present the current artifact and request review instead of advancing. If approval or continued self-verification authorization is explicit, still active (not revoked or superseded), and its artifact/scope remains unchanged, continue only within that recorded scope without asking again.
 
+## Continue in the user's design file
+
+When the user asks for the next screen, inspect the approved screens and reuse their foundations, components and navigation conventions. Consult an existing earlier version or screen inventory when supplied to determine scope; do not recreate completed screens or invent a new destination without context.
+
+Use the active native design file and the requested page. A request for direct editing is not satisfied by a chat image, SVG import, headless draft or separate file. If the live connection fails, inspect current state and report the limit; do not silently substitute another deliverable. Keep app-specific recovery details in the editor references.
+
 ## Keep document work recoverable
 
 Use one writer per document. Any independent research or agent work must stay within the explicitly authorized stage scope; concurrent editors must not mutate overlapping design state. Capture a safe checkpoint before broad replacement and compare current state with that checkpoint before recovery. Do not overwrite an open live document with a backup or discard newer user changes.
 
 For multi-step fragile work, keep a small actual-state ledger: current document identity, canonical source relationships, completed operations and pending verification. Re-resolve identifiers after reload. Avoid a ledger for a tiny edit. Report what was visibly checked, structurally checked, saved, reopened, prototyped or implemented separately.
 
-Read [OpenPencil adapter notes](references/openpencil.md) only when using that editor. Read [sources and rationale](references/sources.md) for provenance, not as an additional execution checklist.
+Read [OpenPencil adapter notes](references/openpencil.md) or [FigCraft reference notes](references/figcraft.md) only when using the corresponding editor. Read [sources and rationale](references/sources.md) for provenance, not as an additional execution checklist.

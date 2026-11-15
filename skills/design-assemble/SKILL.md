@@ -23,6 +23,14 @@ Use the editor's real instance operations. Reuse canonical controls, domain comp
 
 For an existing screen, change the smallest subtree needed. Preserve selected/saved items, collapsed sections, active navigation and other intentional initial states. For a new screen, implement the requested realistic content and states without inventing extra product behavior.
 
+## Make screen frames usable as screens
+
+Keep each prototype destination frame scoped to the actual viewport and intended scroll content. Put screen numbers, rationale and review notes outside it; a presentation board surrounding a phone is not the phone's prototype screen. Preserve the user's page organization. For related flows on one page, use consistent frame dimensions, spacing and ordered rows by journey rather than one page per state.
+
+Use the approved role mapping from the [typography specification](../design-foundations/references/typography-specification.md); do not infer new font sizes from a zoomed screenshot. Apply approved text styles and compact icon sizes to linked sources and supported overrides. Align trailing actions to the shared content inset, not an arbitrary text-box edge; align leading metadata icons with their text group. Use realistic long copy to check one-line metadata layouts instead of shrinking text to force a fit.
+
+For cover/header changes, follow the latest accepted arrangement. Treat image cropping, solid header versus overlay, gradient strength, button contrast and scrolling as separate choices; do not reintroduce a rejected overlay. Keep selectable values per item separate from unrelated profile roles or skills. When adding flow steps, update progress labels, ordered placement, forward/back links and skip destinations together. Mark sample selections and unimplemented inputs outside the screen.
+
 ## Inspect after each risky mutation
 
 A failed move, conversion or reparent operation may have partially changed the document. Inspect source and destination before retrying. Confirm the instance remains linked, its content is present and no source was orphaned. Re-resolve identifiers after conversion or reload.

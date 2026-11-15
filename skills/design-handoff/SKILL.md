@@ -15,7 +15,7 @@ For the requested scope, map design source names to existing or proposed code co
 
 - Props/state axes and their values; content slots and nested component replacement.
 - Parent versus child layout ownership, sizing behavior, spacing and responsive behavior actually specified.
-- Typography, color, spacing, radius and other reused values mapped to existing semantic tokens.
+- Typography, color, spacing, radius and other reused values mapped to existing semantic tokens. For typography, carry the approved [specification](../design-foundations/references/typography-specification.md): role, family/fallback, weight, size/line height, platform mapping and text-scaling/reflow acceptance; distinguish desktop proposals from approved mobile values.
 - Interaction behavior, accessible role/name, keyboard operation, focus visibility and relevant selected/expanded/disabled state.
 
 For token parity work, establish the authoritative source and permitted update direction. Compare mapped names, types, per-mode values and alias targets, not just resolved literals. Keep review read-only; apply only authorized deltas, preserve identities and alias relationships, then re-read affected bindings. Do not retire stale tokens without scope to do so.

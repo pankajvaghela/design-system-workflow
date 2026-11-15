@@ -138,3 +138,22 @@ Use a case as an independent dry run: give the reviewer the request and supplied
 - With explicit continued self-verification, verify the foundation before dependent work; stop for a missing material user decision rather than inventing approval.
 - In an editor without native theme modes, label previews and mappings honestly. Never claim functional mode switching or duplicate the canonical component library per theme.
 - A requested color-only change preserves typography, imagery and unrelated product behavior. A failed contrast pair is repaired and rechecked or reported unresolved; it is not marked passed.
+
+
+## 15. Mobile typography before the next screen
+
+**Request:** “We have colors already. Create mobile typography, then use it on home and its linked components. Keep icons small.”
+
+**Acceptance:** Reuse colors; produce semantic mobile text styles and realistic specimens at native width. Separate compact icon visuals from interaction targets. Apply the approved scale through canonical sources and verify linked home layouts and wrapping. Do not invent a desktop redesign or claim runtime accessibility from the mockup.
+
+## 16. Native screen frames and organized flows
+
+**Request:** “Continue in the open file. Keep signup, sign-in, recovery and dancer onboarding in separate rows on one page.”
+
+**Acceptance:** Edit the intended live document, reuse shared sources, keep annotations outside viewport frames and align flow rows with consistent spacing. A new step updates step counts and forward/back/skip destinations. An imported SVG or separate draft does not satisfy direct editing. Static controls are identified as illustrative unless exercised.
+
+## 17. Consolidation without duplicate sources
+
+**Facts:** A shared component page contains two copies of the same header inherited from list and card source pages.
+
+**Acceptance:** Inspect equivalence and inbound references, migrate to one canonical header while preserving overrides, and check both screens before deleting the duplicate. Preserve distinct list/card structures. A page move alone is not completion.

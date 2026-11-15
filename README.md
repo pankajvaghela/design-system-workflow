@@ -2,11 +2,20 @@
 
 **Build reusable components first. Assemble linked screens. Review each stage before moving on.**
 
-`pankajvaghela/design-system-workflow` is an app-independent design workflow for AI agents. One orchestrator and six specialist skills guide the work from inspecting an existing design through layout exploration, palette and theming, component construction, screen assembly and verification.
+`pankajvaghela/design-system-workflow` is an app-independent design workflow for AI agents. One orchestrator and six specialist skills guide the work from inspecting an existing design through layout exploration, colors, typography and icon sizing, component construction, screen assembly and verification.
 
 It grew out of practical design work where duplicate components, broken variants and detached screens created avoidable rework. The workflow preserves approved decisions, keeps content separate from state, and checks actual component relationships alongside visual results.
 
-These are agent instructions, not an editor integration. Your agent needs its own access to the design application. Editor capabilities determine which operations are possible; OpenPencil observations are included without assuming other tools behave the same way.
+## Works with OpenPencil and FigCraft
+
+Use this workflow with **OpenPencil** or **FigCraft** through your agent’s available editor tools. The skills remain app-independent; editor-specific notes describe the behavior observed in each.
+
+| Editor | Verification so far |
+| --- | --- |
+| [OpenPencil](skills/design-workflow/references/openpencil.md) | Used for live component, variant and screen-assembly work. Save/reopen verification remained incomplete. |
+| [FigCraft](skills/design-workflow/references/figcraft.md) | Version 0.18.1 passed isolated headless tests for components, variants, text overrides, source propagation, themes, rendering and native save/reopen. Subsequent attached MCP edits, rendered screens and native saves were checked; desktop reopen, imported-file fidelity and prototype execution remain unverified. |
+
+These are agent instructions, not bundled editor integrations. Your agent needs its own access to the design application. Available editor capabilities determine which operations can be performed.
 
 ## Quick install (preferred)
 
@@ -135,7 +144,7 @@ The diagram shows the full route. Skip unnecessary stages rather than requesting
 | --- | --- | --- |
 | **1. Brief and current state** | Inspect the actual document, requirements, existing components and constraints. | Scope, assumptions and the proposed route. |
 | **2. Layout exploration** *(if needed)* | Explore hierarchy, navigation, density and screen structure with temporary parts. | Alternatives and the recommended direction. |
-| **3. Palette and theming** *(if needed)* | Define semantic colors and required themes; reuse approved foundations and check contrast. | Palette roles, representative theme previews and check results. |
+| **3. Visual foundations** *(if needed)* | Reuse or define semantic colors, themes, typography and compact icon sizing. | Theme and type specimens at target viewport sizes, plus relevant checks. |
 | **4. Component contract plan** | Identify sources to reuse or create, names, state properties, content slots and layout ownership. | Component inventory and variant plan. |
 | **5. Components, variants and sections** | Build canonical controls, domain components and reusable sections; inspect linked specimens. | Real sources, representative content and required states. |
 | **6. Linked screen assembly** | Assemble approved instances with the agreed spacing, content and state. | Complete screen previews and inspected source links. |
@@ -161,7 +170,7 @@ Silence and elapsed time never count as approval. Continued self-verification st
 | Skill | Responsibility |
 | --- | --- |
 | [design-workflow](skills/design-workflow/SKILL.md) | Default orchestrator: choose stages, manage review gates and resume from recorded approval state. |
-| [design-foundations](skills/design-foundations/SKILL.md) | Palette, semantic colors, required themes and contrast evidence. |
+| [design-foundations](skills/design-foundations/SKILL.md) | Semantic colors, themes, mobile/desktop typography, icon sizing and relevant evidence. |
 | [design-components](skills/design-components/SKILL.md) | Reusable sources, properties, variants, content slots and component contracts. |
 | [design-assemble](skills/design-assemble/SKILL.md) | Screens composed from linked instances with preserved layout and state. |
 | [design-consolidate](skills/design-consolidate/SKILL.md) | Read-only audits and authorized migration away from duplicate sources. |
@@ -169,6 +178,10 @@ Silence and elapsed time never count as approval. Continued self-verification st
 | [design-verify](skills/design-verify/SKILL.md) | Visual and structural evidence, persistence checks and bounded recovery. |
 
 Ordinary requests enter through the orchestrator. You can explicitly request an isolated specialist task, such as a read-only component audit. That exception does not authorize unrelated changes.
+
+## Typography specification
+
+The foundations skill includes a [typography specification](skills/design-foundations/references/typography-specification.md): semantic roles, a compact mobile example, separately proposed desktop values, native style bindings, icon sizing and verification. The workflow is inspect → specify missing foundations → review → build shared sources → assemble linked screens → verify and save. Reuse approved foundations on later screens; do not repeat the full process for a small edit.
 
 ## Working principles
 
@@ -186,7 +199,7 @@ The pack includes [behavioral scenarios](evaluations/scenarios.md) for review-ga
 
 When changing a skill, check its frontmatter and local links, exercise the affected scenario, and report what was observed versus assumed. Keep editor-specific behavior in reference notes. Native installation and live editor behavior must be verified in the target environment; static validation does not establish those claims.
 
-The [source and adaptation map](skills/design-workflow/references/sources.md) credits the design-skill research behind the original synthesis. [OpenPencil notes](skills/design-workflow/references/openpencil.md) document observations from an early editing session, not a guaranteed API contract. Upstream scripts and manuals are not bundled.
+The [source and adaptation map](skills/design-workflow/references/sources.md) credits the design-skill research behind the original synthesis. [OpenPencil notes](skills/design-workflow/references/openpencil.md) document observations from an early editing session, not a guaranteed API contract. [FigCraft notes](skills/design-workflow/references/figcraft.md) record an isolated component, variant, theme and native-file round-trip test on version 0.18.1; subsequent attached editing, rendering and native saves are also recorded, with reopen and runtime limits. Upstream scripts and manuals are not bundled.
 
 ## OpenAI submission package
 
