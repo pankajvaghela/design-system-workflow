@@ -25,7 +25,7 @@ codex plugin add design-system-workflow@design-system-workflow
 codex plugin list --marketplace design-system-workflow --json
 ```
 
-For an existing repository-based installation, refresh this marketplace and run the add command again. Inspect the installed version and start a new session to refresh discovery. This is distinct from an OpenAI “Created by me” upload; updating a GitHub release does not update that hosted listing.
+For an existing repository-based installation, refresh this marketplace and run the add command again. Inspect the installed version and start a new session to refresh discovery. This is distinct from an OpenAI “Created by me” upload; updating a GitHub release does not update that hosted listing. For that upload, use the named `design-system-workflow-<version>.zip` release asset, not GitHub’s automatic source archive. The upload asset excludes the repository-only marketplace manifest.
 
 ## Quick install (preferred)
 

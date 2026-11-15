@@ -1,6 +1,6 @@
 # OpenAI submission preparation
 
-Prepared November 15, 2026 for package **0.1.4**. This is a skills-only package maintained by Pankaj Vaghela. No submission, approval or directory listing is claimed.
+Prepared November 15, 2026 for package **0.1.5**. This is a skills-only package maintained by Pankaj Vaghela. No submission, approval or directory listing is claimed.
 
 ## Listing
 
@@ -31,7 +31,7 @@ The plugin supplies seven related skills. No server, authentication, lifecycle h
 - Made user-instruction precedence, reference-content boundaries and missing editor access explicit in the orchestrator.
 - Kept MCP-only review fields absent rather than inventing tool calls, credentials or a demo recording.
 
-Version 0.1.4 makes platform priority and editor choice intent-led, adds project preferences and a platform-aware typography specification, compact icon guidance, native-file workflow, organized flow checks and source deduplication guidance. Plugin metadata and all relevant specialist links are aligned.
+Version 0.1.5 fixes the upload ZIP by excluding the repository-only marketplace manifest. It retains the 0.1.4 changes, which make platform priority and editor choice intent-led, adds project preferences and a platform-aware typography specification, compact icon guidance, native-file workflow, organized flow checks and source deduplication guidance. Plugin metadata and all relevant specialist links are aligned.
 
 ## Validation evidence and limits
 
@@ -47,11 +47,12 @@ From the repository root, after reviewing the exact files to include:
 
 ```sh
 mkdir -p dist
-zip -r dist/design-system-workflow-0.1.4.zip plugin.json .codex-plugin/plugin.json skills assets README.md LICENSE PRIVACY.md SUPPORT.md evaluations submission -x '*.DS_Store' '*__pycache__*' '*.pyc'
-unzip -t dist/design-system-workflow-0.1.4.zip
+rm -f dist/design-system-workflow-0.1.5.zip
+zip -r dist/design-system-workflow-0.1.5.zip plugin.json .codex-plugin/plugin.json skills assets README.md LICENSE PRIVACY.md SUPPORT.md evaluations submission -x '*.DS_Store' '*__pycache__*' '*.pyc'
+unzip -t dist/design-system-workflow-0.1.5.zip
 ```
 
-The manifest and `skills/` must be at the archive root. Do not include `.git`, caches, personal files or nested `dist` output. The archive contains only the plugin and its public documentation. Rebuild after any package change; use a new version after publication rather than replacing a published release's contents.
+The manifest and `skills/` must be at the archive root. Exclude `.agents/plugins/marketplace.json`: it is only for repository installation. Including it makes the uploader interpret this as a marketplace archive, whose remote-only entry has no local plugin to upload. Build a fresh ZIP, since updating an existing ZIP can retain excluded entries. Use the named release asset, not GitHub’s automatic source archive. Do not include `.git`, caches, personal files or nested `dist` output. The archive contains only the plugin and its public documentation. Rebuild after any package change; use a new version after publication rather than replacing a published release's contents.
 
 ## Remaining owner and portal steps
 
