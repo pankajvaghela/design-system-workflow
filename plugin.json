@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "design-system-workflow",
+  "description": "Review-gated component-first design orchestration with specialist skills for palette and theming, components, screen assembly, cleanup, handoff, and verification.",
+  "author": {
+    "name": "Pankaj Vaghela",
+    "url": "https://github.com/pankajvaghela"
+  },
+  "version": "0.1.1",
+  "homepage": "https://github.com/pankajvaghela/design-system-workflow",
+  "repository": "https://github.com/pankajvaghela/design-system-workflow",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "agent-skills",
+    "design-workflow",
+    "components",
+    "theming"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Design System Workflow",
+        "shortDescription": "Reusable design, reviewed",
+        "longDescription": "Plan and build reusable design systems with explicit review between stages. Inspect an existing design, explore layouts, establish palette and themes, define component contracts, build variants and sections, assemble linked screens, and verify the result. Designed for designers and developers working with AI agents. Seven coordinated skills reuse approved decisions and keep content separate from component state. Review gates are the default; users can explicitly authorize continued self-verification. Planning and contract reviews can use supplied material. Editing and inspecting live designs require a compatible editor connection supplied by the user or host; this plugin does not include an editor connector. Static checks do not prove runtime accessibility or save/reopen behavior.",
+        "developerName": "Pankaj Vaghela",
+        "category": "Productivity",
+        "capabilities": [
+          "Design planning",
+          "Palette and theming",
+          "Reusable components",
+          "Linked screen assembly",
+          "Design verification"
+        ],
+        "websiteURL": "https://github.com/pankajvaghela/design-system-workflow",
+        "supportURL": "https://github.com/pankajvaghela/design-system-workflow/blob/main/SUPPORT.md",
+        "privacyPolicyURL": "https://github.com/pankajvaghela/design-system-workflow/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/pankajvaghela/design-system-workflow/blob/main/LICENSE",
+        "defaultPrompt": [
+          "Help me plan a reusable design system, pausing for my review between stages.",
+          "Review my component inventory for duplicate sources and missing variants.",
+          "Help me define a color palette and themes before building components."
+        ],
+        "brandColor": "#4338CA",
+        "brandColorDark": "#A5B4FC",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}

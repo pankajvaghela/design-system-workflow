@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Three design components connected to a review check">
+  <rect width="256" height="256" rx="56" fill="#18152D"/>
+  <path d="M88 73H166M64 98V166M89 191H157" fill="none" stroke="#A5B4FC" stroke-width="12" stroke-linecap="round"/>
+  <rect x="40" y="49" width="48" height="48" rx="12" fill="#A5B4FC"/>
+  <rect x="166" y="49" width="48" height="48" rx="12" fill="#A5B4FC"/>
+  <rect x="40" y="167" width="48" height="48" rx="12" fill="#A5B4FC"/>
+  <circle cx="187" cy="187" r="36" fill="#5EEAD4"/>
+  <path d="m170 187 12 12 23-26" fill="none" stroke="#18152D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

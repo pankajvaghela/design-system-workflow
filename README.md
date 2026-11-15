@@ -8,7 +8,9 @@ It grew out of practical design work where duplicate components, broken variants
 
 These are agent instructions, not an editor integration. Your agent needs its own access to the design application. Editor capabilities determine which operations are possible; OpenPencil observations are included without assuming other tools behave the same way.
 
-## Quick install: all seven skills
+## Quick install (preferred)
+
+Install all seven skills with the Skills CLI. This is the preferred route for Codex and Claude Code.
 
 Requires Git and Node.js 22.20 or later. Run from the project where you want to use the workflow. These commands use Skills CLI **1.8.1**, the version verified for this release.
 
@@ -44,6 +46,8 @@ This route installs portable skills, not a native plugin-directory listing. For 
 
 **Verified on November 15, 2026:** a clean temporary project installed all seven skills from the public GitHub repository for both Codex and Claude Code with Skills CLI 1.8.1 and Node.js 24.15.0. The CLI listed all seven for both hosts; installed content matched the sources and sibling/reference links resolved. The noninteractive test used `--yes`. Global installation, native plugin registration and a live agent/editor session were not tested.
 
+Skills are discovered on [skills.sh](https://www.skills.sh/docs/faq) through users’ CLI installations with telemetry enabled; no separate directory submission is required. The installation test above used telemetry disabled.
+
 ## Install with your AI agent
 
 Copy this prompt into your agent:
@@ -73,7 +77,7 @@ discovery cannot be verified, say so and show how to invoke SKILL.md by path.
 Do not begin editing a design as part of installation.
 ```
 
-The repository includes a Codex plugin manifest at [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json). Other agents can consume the portable `SKILL.md` files using their supported skill mechanism. Native plugin registration is host-specific; cloning the repository alone does not register it.
+The repository includes a portable manifest at [`plugin.json`](plugin.json) and a matching Codex compatibility manifest at [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json). Other agents can consume the portable `SKILL.md` files using their supported skill mechanism. Native plugin registration is host-specific; cloning the repository alone does not register it.
 
 For manual use, clone the repository:
 
@@ -183,6 +187,12 @@ The pack includes [behavioral scenarios](evaluations/scenarios.md) for review-ga
 When changing a skill, check its frontmatter and local links, exercise the affected scenario, and report what was observed versus assumed. Keep editor-specific behavior in reference notes. Native installation and live editor behavior must be verified in the target environment; static validation does not establish those claims.
 
 The [source and adaptation map](skills/design-workflow/references/sources.md) credits the design-skill research behind the original synthesis. [OpenPencil notes](skills/design-workflow/references/openpencil.md) document observations from an early editing session, not a guaranteed API contract. Upstream scripts and manuals are not bundled.
+
+## OpenAI submission package
+
+The [submission preparation notes](submission/README.md) contain listing details, validation evidence, remaining portal steps and reproducible ZIP instructions. Preparing a bundle does not mean it has been submitted, approved or listed.
+
+[Privacy policy](PRIVACY.md) · [Support](SUPPORT.md)
 
 ## License
 
