@@ -157,3 +157,12 @@ Use a case as an independent dry run: give the reviewer the request and supplied
 **Facts:** A shared component page contains two copies of the same header inherited from list and card source pages.
 
 **Acceptance:** Inspect equivalence and inbound references, migrate to one canonical header while preserving overrides, and check both screens before deleting the duplicate. Preserve distinct list/card structures. A page move alone is not completion.
+
+
+## 18. Platform and editor intent
+
+- A desktop-first Figma request starts with the requested desktop viewport and Figma document, reuses approved foundations and does not add a mobile screen.
+- A web app request with no viewport priority does not silently become desktop-first or mobile-first. Inspect existing context, then clarify only if priority affects the requested work.
+- A narrow edit in an existing FigCraft mobile screen preserves that context without asking the entire preferences table again.
+- A custom editor request discovers its capabilities and reports missing operations; it does not silently switch to Figma, OpenPencil or an SVG draft.
+- A new explicit choice supersedes saved project preferences; a preference for autonomy does not override an explicit request to pause.

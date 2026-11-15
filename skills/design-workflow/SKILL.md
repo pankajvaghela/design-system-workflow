@@ -18,6 +18,12 @@ Explicit user instructions take precedence over these workflow defaults, subject
 
 If supplied research informs the brief, trace findings to observations, distinguish confidence and contradictions, and separate implications from open questions. Do not invent research evidence.
 
+## Establish project intent, not a platform default
+
+The workflow determines how to proceed after the user chooses the outcome; it does not choose mobile-first, web-first, desktop-first, a framework or a design editor by default. Follow explicit session choices, then approved project guidance and the current document. A web app may target mobile and desktop viewports; separate delivery platform from viewport priority.
+
+For a new project or changed direction, consult the compact [design preferences](references/design-preferences.md) template. Reuse known choices rather than asking a questionnaire every turn. Ask only for missing choices that materially affect this task. Until resolved, inspect existing artifacts without silently choosing a platform or editor. Keep routine local edits within their known context.
+
 ## Explore before committing to structure
 
 If hierarchy or interaction is undecided, explore the requested screen or flow with a few temporary parts. Do not add destinations beyond that scope. Exploration may finish with inspectable alternatives and an unresolved decision. Test information order, density and navigation in context before investing in a library. Ground the direction in the audience, task and real copy; choose deliberate hierarchy and typography within approved constraints, with motion only when it serves the interaction. Use clearly temporary exploration space; do not pollute the canonical library. Explore alternatives only when they answer a real decision. Once a direction is chosen, turn repeated concepts into real sources before final screen assembly.
@@ -39,7 +45,7 @@ Select only stages needed for the requested outcome. Tell the user the short rou
 | Brief/current-state review | Inspected scope, constraints, inventory and concise intended outcome | [design-consolidate](../design-consolidate/SKILL.md) for an audit; otherwise inspect directly |
 | Layout exploration, only if undecided | Inspectable screen/flow alternatives with the decision they test | Work within this skill; [design-verify](../design-verify/SKILL.md) for review if useful |
 | Color and icon foundations, when missing or changing | Semantic colors, required themes, compact icon sizing and relevant checks | [design-foundations](../design-foundations/SKILL.md) |
-| Typography specification, when missing or changing | Mobile-first semantic text styles, in-context specimen and requested desktop mapping; reuse approved color roles | [design-foundations](../design-foundations/SKILL.md) and its [typography specification](../design-foundations/references/typography-specification.md) |
+| Typography specification, when missing or changing | Semantic text styles for the chosen platforms, in-context specimens and requested responsive mappings; reuse approved color roles | [design-foundations](../design-foundations/SKILL.md) and its [typography specification](../design-foundations/references/typography-specification.md) |
 | Component contract plan | Proposed reuse/source map, required props, content slots and layout ownership | [design-components](../design-components/SKILL.md), planning only |
 | Components, variants and sections | Actual sources with representative linked specimens and checked states | [design-components](../design-components/SKILL.md); [design-consolidate](../design-consolidate/SKILL.md) for authorized migration |
 | Linked screen assembly | Rendered requested screens with preserved content/layout/state and inspected links | [design-assemble](../design-assemble/SKILL.md) |

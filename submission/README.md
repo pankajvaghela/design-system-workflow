@@ -1,6 +1,6 @@
 # OpenAI submission preparation
 
-Prepared November 15, 2026 for package **0.1.3**. This is a skills-only package maintained by Pankaj Vaghela. No submission, approval or directory listing is claimed.
+Prepared November 15, 2026 for package **0.1.4**. This is a skills-only package maintained by Pankaj Vaghela. No submission, approval or directory listing is claimed.
 
 ## Listing
 
@@ -31,7 +31,7 @@ The plugin supplies seven related skills. No server, authentication, lifecycle h
 - Made user-instruction precedence, reference-content boundaries and missing editor access explicit in the orchestrator.
 - Kept MCP-only review fields absent rather than inventing tool calls, credentials or a demo recording.
 
-Version 0.1.3 adds the mobile-first typography specification, desktop proposals, compact icon guidance, native-file workflow, organized flow checks and source deduplication guidance. Plugin metadata and all relevant specialist links are aligned.
+Version 0.1.4 makes platform priority and editor choice intent-led, adds project preferences and a platform-aware typography specification, compact icon guidance, native-file workflow, organized flow checks and source deduplication guidance. Plugin metadata and all relevant specialist links are aligned.
 
 ## Validation evidence and limits
 
@@ -47,8 +47,8 @@ From the repository root, after reviewing the exact files to include:
 
 ```sh
 mkdir -p dist
-zip -r dist/design-system-workflow-0.1.3.zip plugin.json .codex-plugin/plugin.json skills assets README.md LICENSE PRIVACY.md SUPPORT.md evaluations submission -x '*.DS_Store' '*__pycache__*' '*.pyc'
-unzip -t dist/design-system-workflow-0.1.3.zip
+zip -r dist/design-system-workflow-0.1.4.zip plugin.json .codex-plugin/plugin.json skills assets README.md LICENSE PRIVACY.md SUPPORT.md evaluations submission -x '*.DS_Store' '*__pycache__*' '*.pyc'
+unzip -t dist/design-system-workflow-0.1.4.zip
 ```
 
 The manifest and `skills/` must be at the archive root. Do not include `.git`, caches, personal files or nested `dist` output. The archive contains only the plugin and its public documentation. Rebuild after any package change; use a new version after publication rather than replacing a published release's contents.

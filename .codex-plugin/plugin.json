@@ -1,11 +1,11 @@
 {
   "name": "design-system-workflow",
-  "description": "Review-gated design workflow for mobile-first typography specifications, colors and icons, reusable components, linked screens, cleanup and verification.",
+  "description": "Review-gated design workflow for intent-led typography specifications, colors and icons, reusable components, linked screens, cleanup and verification.",
   "author": {
     "name": "Pankaj Vaghela",
     "url": "https://github.com/pankajvaghela"
   },
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/pankajvaghela/design-system-workflow",
   "repository": "https://github.com/pankajvaghela/design-system-workflow",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "defaultPrompt": [
       "Help me plan a reusable design system, pausing for my review between stages.",
       "Review my component inventory for duplicate sources and missing variants.",
-      "Define a mobile-first typography specification, colors and icon sizing before building linked components and screens."
+      "Define typography, colors and icon sizing for my chosen platforms and editor before building linked components and screens."
     ],
     "brandColor": "#4338CA",
     "brandColorDark": "#A5B4FC",

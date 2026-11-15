@@ -17,6 +17,16 @@ Use this workflow with **OpenPencil** or **FigCraft** through your agent’s ava
 
 These are agent instructions, not bundled editor integrations. Your agent needs its own access to the design application. Available editor capabilities determine which operations can be performed.
 
+## Native Codex plugin installation
+
+```sh
+codex plugin marketplace add pankajvaghela/design-system-workflow
+codex plugin add design-system-workflow@design-system-workflow
+codex plugin list --marketplace design-system-workflow --json
+```
+
+For an existing repository-based installation, refresh this marketplace and run the add command again. Inspect the installed version and start a new session to refresh discovery. This is distinct from an OpenAI “Created by me” upload; updating a GitHub release does not update that hosted listing.
+
 ## Quick install (preferred)
 
 Install all seven skills with the Skills CLI. This is the preferred route for Codex and Claude Code.
@@ -179,9 +189,13 @@ Silence and elapsed time never count as approval. Continued self-verification st
 
 Ordinary requests enter through the orchestrator. You can explicitly request an isolated specialist task, such as a read-only component audit. That exception does not authorize unrelated changes.
 
+## Project design preferences
+
+The workflow has no default platform priority or editor. Use the user's goals, approved project choices and current design file. Keep a small [design preferences section](skills/design-workflow/references/design-preferences.md) in existing project guidance when useful: outcome, platforms/viewports, priority, editor/document and review mode. This is project context, not a new runtime settings system or mandatory setup form.
+
 ## Typography specification
 
-The foundations skill includes a [typography specification](skills/design-foundations/references/typography-specification.md): semantic roles, a compact mobile example, separately proposed desktop values, native style bindings, icon sizing and verification. The workflow is inspect → specify missing foundations → review → build shared sources → assemble linked screens → verify and save. Reuse approved foundations on later screens; do not repeat the full process for a small edit.
+The foundations skill includes a [typography specification](skills/design-foundations/references/typography-specification.md): semantic roles, illustrative mobile and desktop values, native style bindings, icon sizing and verification. The workflow is inspect → specify missing foundations → review → build shared sources → assemble linked screens → verify and save. Reuse approved foundations on later screens; do not repeat the full process for a small edit.
 
 ## Working principles
 

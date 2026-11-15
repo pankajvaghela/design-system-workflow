@@ -5,7 +5,7 @@ Read when creating, changing, applying or handing off a type scale. The product'
 ## Workflow and deliverable
 
 1. Inspect existing fonts, text styles, target platforms and representative screens. Identify missing roles or inconsistent overrides before proposing values.
-2. Define the required mobile roles first when the brief is mobile-first. Include desktop only when requested; mark unreviewed values as proposed.
+2. Define roles for the chosen primary viewport/platform first. Add only other requested platforms; mark unreviewed values as proposed. If priority is unresolved and affects the task, clarify it rather than assuming mobile-first.
 3. Create native named text styles and an editable typography specimen on the existing foundations page alongside colors. Use one row per role and realistic content, not only alphabet samples.
 4. Verify the specimen in a real screen at native width and 100% scale. In review mode, obtain approval before propagating a new scale; explicit continuation still requires these checks.
 5. Apply approved styles to canonical controls, domain sections and then linked screens. Audit relevant overrides so older hard-coded sizes do not mask source updates. Preserve deliberate brand wordmarks and other documented exceptions.
@@ -15,9 +15,9 @@ For each role record: semantic name, intended use, font family and fallback, wei
 
 ## Example compact app scale
 
-These values are an illustrative starting proposal inspired by a mobile event app, not an accessibility standard or a requirement for every product. Use the approved product font; Inter is an example. Desktop values are a starting proposal and require their own review. Values are size/line-height in design pixels, not device pixels; implementation must map to platform text units and user text scaling.
+These values are an illustrative starting proposal inspired by a mobile event app, not an accessibility standard or a requirement for every product. Use the approved product font; Inter is an example. Both columns are unapproved examples and require review for the target product; neither is the default starting platform. Values are size/line-height in design pixels, not device pixels; implementation must map to platform text units and user text scaling.
 
-| Semantic role | Mobile example | Desktop proposal | Weight | Intended use |
+| Semantic role | Mobile example | Desktop example | Weight | Intended use |
 | --- | --- | --- | --- | --- |
 | Title | 22/28 | 28/36 | 600 | Screen or event title |
 | Section | 18/24 | 22/28 | 600 | Section heading |

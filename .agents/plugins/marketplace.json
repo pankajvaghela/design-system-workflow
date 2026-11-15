@@ -1,0 +1,21 @@
+{
+  "name": "design-system-workflow",
+  "interface": {
+    "displayName": "Design System Workflow"
+  },
+  "plugins": [
+    {
+      "name": "design-system-workflow",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/pankajvaghela/design-system-workflow.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Art & Design"
+    }
+  ]
+}
