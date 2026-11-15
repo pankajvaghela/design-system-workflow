@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System Workflow"
+  short_description: "Design in focused stages with user review gates"
+  default_prompt: "Use $design-workflow to guide my design work and pause for my review and explicit approval between stages."

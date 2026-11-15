@@ -1,0 +1,17 @@
+{
+  "name": "design-system-workflow",
+  "version": "0.1.0",
+  "description": "Review-gated component-first design orchestration with specialist skills for palette and theming, components, screen assembly, cleanup, handoff, and verification.",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design System Workflow",
+    "shortDescription": "Build reusable design systems and linked screens",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Use $design-workflow to guide my design work, pausing for my review and explicit approval between stages."
+    ]
+  },
+  "author": {
+    "name": "Pankaj Vaghela"
+  }
+}
