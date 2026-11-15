@@ -8,6 +8,42 @@ It grew out of practical design work where duplicate components, broken variants
 
 These are agent instructions, not an editor integration. Your agent needs its own access to the design application. Editor capabilities determine which operations are possible; OpenPencil observations are included without assuming other tools behave the same way.
 
+## Quick install: all seven skills
+
+Requires Git and Node.js 22.20 or later. Run from the project where you want to use the workflow. These commands use Skills CLI **1.8.1**, the version verified for this release.
+
+**Codex:**
+
+```sh
+npx skills@1.8.1 add pankajvaghela/design-system-workflow --skill '*' --agent codex
+```
+
+**Claude Code:**
+
+```sh
+npx skills@1.8.1 add pankajvaghela/design-system-workflow --skill '*' --agent claude-code
+```
+
+**Both:**
+
+```sh
+npx skills@1.8.1 add pankajvaghela/design-system-workflow --skill '*' --agent codex claude-code
+```
+
+Keep the quotes around `'*'`: it selects every skill in this repository. Install all seven together because the orchestrator and specialists reference one another. This installs skills into the current project; add `--global` only if you want them available across projects. Review any existing skills with the same names before accepting replacement. Avoid `--all`, which also selects every supported agent.
+
+Check the installation:
+
+```sh
+npx skills@1.8.1 list --agent codex claude-code
+```
+
+You should see `design-workflow`, `design-foundations`, `design-components`, `design-assemble`, `design-consolidate`, `design-handoff`, and `design-verify`. Start with `design-workflow`; if the host has not refreshed its skill discovery, open a new session or invoke the installed `SKILL.md` by path.
+
+This route installs portable skills, not a native plugin-directory listing. For Codex, the verified project location is `.agents/skills/`; Claude Code receives links in `.claude/skills/` to those same skill folders. The Skills CLI also creates a project lock file. See the [Skills CLI documentation](https://github.com/vercel-labs/skills) for other agents and options.
+
+**Verified on November 15, 2026:** a clean temporary project installed all seven skills from the public GitHub repository for both Codex and Claude Code with Skills CLI 1.8.1 and Node.js 24.15.0. The CLI listed all seven for both hosts; installed content matched the sources and sibling/reference links resolved. The noninteractive test used `--yes`. Global installation, native plugin registration and a live agent/editor session were not tested.
+
 ## Install with your AI agent
 
 Copy this prompt into your agent:
@@ -16,7 +52,8 @@ Copy this prompt into your agent:
 Install the design-system-workflow plugin and its seven skills from:
 https://github.com/pankajvaghela/design-system-workflow
 
-Read the README and inspect the repository before making changes. Detect this
+Read the README and inspect the repository before making changes. Prefer its
+verified all-seven-skills command for Codex or Claude Code. Detect this
 agent host's supported plugin/skill installation mechanism and consult its
 current official instructions. Use native plugin installation if supported;
 otherwise install all seven skill folders together in a supported skill
