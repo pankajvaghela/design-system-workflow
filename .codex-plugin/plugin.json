@@ -5,7 +5,7 @@
     "name": "Pankaj Vaghela",
     "url": "https://github.com/pankajvaghela"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/pankajvaghela/design-system-workflow",
   "repository": "https://github.com/pankajvaghela/design-system-workflow",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "shortDescription": "Reusable design, reviewed",
     "longDescription": "Plan and build reusable design systems with explicit review between stages. Inspect an existing design, explore layouts, establish palette and themes, define component contracts, build variants and sections, assemble linked screens, and verify the result. Designed for designers and developers working with AI agents. Seven coordinated skills reuse approved decisions and keep content separate from component state. Review gates are the default; users can explicitly authorize continued self-verification. Planning and contract reviews can use supplied material. Editing and inspecting live designs require a compatible editor connection supplied by the user or host; this plugin does not include an editor connector. Static checks do not prove runtime accessibility or save/reopen behavior.",
     "developerName": "Pankaj Vaghela",
-    "category": "Productivity",
+    "category": "Art & Design",
     "capabilities": [
       "Design planning",
       "Palette and theming",
